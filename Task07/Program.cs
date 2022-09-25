@@ -2,3 +2,8 @@
 // 456 -> 6
 // 782 -> 2
 // 918 ->8
+
+Console.Write("Введите чило трехзначное: ");
+int n  = Convert.ToInt32(Console.ReadLine());
+int res = n % 10;
+Console.Write(res);
