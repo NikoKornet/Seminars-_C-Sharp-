@@ -28,7 +28,7 @@ void PrintArray (int[] array)
     }
 }
 
-nt[] array = new int[8];
+int[] array = new int[8];
 GetArray(array);
 PrintArray(array);
 
