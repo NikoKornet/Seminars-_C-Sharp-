@@ -12,5 +12,7 @@ bool CheckMultiplicity(int arg1, int arg2)
 {
     return arg1 % arg2 == 0;
 }
-if (CheckMultiplicity(number1,number2)) Console.WriteLine($"{number1} кратно {number2}");
+
+bool result = CheckMultiplicity(number1,number2);
+if (result) Console.WriteLine($"{number1} кратно {number2}");
 else Console.Write($"{number1} не кратно {number2}! Остаток: {number1 % number2}");

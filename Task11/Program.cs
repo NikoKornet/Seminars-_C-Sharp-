@@ -13,3 +13,4 @@ int RemoveSecondDigit(int num)
 
 int result = RemoveSecondDigit(number);
 Console.WriteLine($"Итоговое число от {number} => {result}");
+ 
