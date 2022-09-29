@@ -5,9 +5,9 @@
 // 7 -> да
 // 1 -> нет
 
-Console.WriteLine("Введите число соответствующее дню недели: ");
-int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число обозначающее день недели: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-if (num > 0 && num <= 5) Console.WriteLine("Нет, это будний день!");
-if (num == 6 || num == 7) Console.Write("Да, это выходной день.");
-if (num < 1 || num > 7) Console.WriteLine("Введено некорректное число!");
+if (number > 0 && number <= 5) Console.WriteLine("Нет, это будний день!");
+if (number == 6 || number == 7) Console.Write("Да, это выходной день!");
+if (number < 1 || number > 7) Console.WriteLine("Введено некорректное число!");
