@@ -7,13 +7,17 @@
 Console.WriteLine("Введите число от 100 до 1000: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+int result = SecondDigit(number);
+
 int SecondDigit(int num)
 {
-    int thirdDigit = num / 10;
-    int secondDigit = thirdDigit % 10;
+    int secondDigit = num / 10 % 10;
     return secondDigit;
 }
 
-int result = SecondDigit(number);
-Console.WriteLine($"Вторая цифра числа {number} => {result}");
+if (number > 99 && number < 1000)
+    Console.WriteLine($"Вторая цифра числа {number} => {result}");
+
+else Console.WriteLine("Введено не коректное число");
+
  
