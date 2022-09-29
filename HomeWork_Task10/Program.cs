@@ -18,6 +18,6 @@ int SecondDigit(int num)
 if (number > 99 && number < 1000)
     Console.WriteLine($"Вторая цифра числа {number} => {result}");
 
-else Console.WriteLine("Введено не коректное число");
+else Console.WriteLine("Введено некорректное число!");
 
  
