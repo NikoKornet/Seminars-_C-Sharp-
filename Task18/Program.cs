@@ -4,15 +4,14 @@
 
 Console.WriteLine("Введите номер четверти в диапозоне от 1 до 4 включительно ");
 int number = Convert.ToInt32(Console.ReadLine());
+string result = Range(number);
+Console.WriteLine(result);
 
-string Quater(int num)
+string Range(int num)
 {
     if (num == 1) return "Диапазон равен х > 0, у > 0 ";
     if (num == 2) return "Диапазон равен х < 0, у > 0 ";
     if (num == 3) return "Диапазон равен х < 0, у > 0 ";
     if (num == 4) return "Диапазон равен х > 0, у < 0 ";
-    return "Введите верный номр четверти";
-}
-
-string result = Quater(number);
-Console.WriteLine(result);
+    return "Введены некорректные данные";
+    }
