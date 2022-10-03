@@ -3,30 +3,30 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
-int[] array = new int[8];
-int[] arrayNew = FoolArray(array);
+// int[] array = new int[8];
+// int[] arrayNew = FoolArray(array);
 
-PrintArray(arrayNew);
+// PrintArray(arrayNew);
 
-int[] FoolArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = new Random().Next(0, 2);
-    }
-    return arr;
-}
+// int[] FoolArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0, 2);
+//     }
+//     return arr;
+// }
 
-void PrintArray (int[] array)
-{
-    int count = array.Length;
-    int position = 0;
-    while (position < count)
-    {
-        Console.Write(array[position]);
-        position++;
-    }
-}
+// void PrintArray (int[] array)
+// {
+//     int count = array.Length;
+//     int position = 0;
+//     while (position < count)
+//     {
+//         Console.Write(array[position]);
+//         position++;
+//     }
+// }
 
 int[] array = new int[8];
 GetArray(array);
