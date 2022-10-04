@@ -6,7 +6,8 @@
 
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int result = DigitQuantity(number);
+
+int result = DigitQuantity(Math.Abs(number)); // Math.Abs (модуль числа) - не учитывается знак.
 Console.WriteLine($"количество цифр в числе {number} = {result}");
 
 int DigitQuantity(int num)
