@@ -42,12 +42,12 @@ void GetArray(int[] arr)
         arr[i] = rnd.Next(0, 2);
     }
 }
-void PrintArray(int[] array)
+void PrintArray(int[] arr)
 {
-    int count = array.Length;
+    int count = arr.Length;
     for (int i = 0; i < count; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"{arr[i]} ");
     }
     Console.WriteLine();
 }
