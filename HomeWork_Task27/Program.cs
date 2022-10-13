@@ -22,3 +22,24 @@ int SumResult(int num)
     }
     return sumResult;
 }
+
+// int QuantityOfDigits(int number)
+// {
+//     int quantityOfDigits = 0;
+//     for (; quantityOfDigits < number; quantityOfDigits++)
+//     {
+//         number = number / 10;
+//     }
+//     return quantityOfDigits;
+// }
+
+// int SumOfDigits(int number, int quantityOfDigits)
+// {
+//     int sumOfDigits = 0;
+//     for (int i = 0; i <= quantityOfDigits; i++)
+//     {
+//         sumOfDigits += number % 10;
+//         number /= 10;
+//     }
+//     return sumOfDigits;
+// }
