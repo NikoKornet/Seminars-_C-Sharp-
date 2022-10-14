@@ -9,6 +9,7 @@
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
+ReturnsValueElement(array2D);
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
@@ -32,9 +33,24 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4}, ");
-            else Console.Write($"{matrix[i,j], 4}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
+            else Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine("|");
     }
+    Console.WriteLine();
+}
+
+void ReturnsValueElement(int[,] matrix)
+{
+    Console.Write("Укажите значение строки: m = ");
+    int numM = Convert.ToInt32(Console.ReadLine()) - 1;
+    Console.Write("Укажите значение столбца: n = ");
+    int numN = Convert.ToInt32(Console.ReadLine()) -1;
+
+    if (numM < 0 || numN < 0) Console.Write("Неверно заданы значения");
+    else if (numM >= matrix.GetLength(0) || numN >= matrix.GetLength(1))
+        Console.WriteLine("Такого элемента не существует!");
+
+    else Console.WriteLine($"Значение заданного элемента -> {matrix[numM, numN]}");
 }

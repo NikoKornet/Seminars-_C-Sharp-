@@ -8,6 +8,8 @@
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
+double[] arithmeticMeanElemColumn = ArithmeticMeanElemColumn(array2D);
+PrintArrayColumnsMean(arithmeticMeanElemColumn);
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
@@ -27,25 +29,41 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
-    {
+    {   
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4}, ");
-            else Console.Write($"{matrix[i,j], 4}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
+            else Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine("|");
     }
 }
 
-int ArithmeticMeanElemColumn(int[,] matrix)
+void PrintArrayColumnsMean(double[] array)
 {
-    int sum = default;
-    int counter = 0;
+    Console.Write("Среднее арифметическое каждого столбца:");
+    Console.Write(" ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i]}; ");
+        else Console.Write($"{array[i]}");
+    }
+    Console.WriteLine(".");
+}
+
+double[] ArithmeticMeanElemColumn(int[,] matrix)
+{
+    double[] columnsMean = new double[matrix.GetLength(1)];
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        sum = sum + matrix[i, i];
-        counter++; 
+        double meanElemColumn = 0;
+        for (int j = 0; j < matrix.GetLength(0); j++)
+        {
+            meanElemColumn = meanElemColumn + matrix[j, i];
+            columnsMean[i] = Math.Round((Convert.ToDouble(meanElemColumn) / matrix.GetLength(0)), 2);
+        }
+        
     }
-    return sum;
+    return columnsMean;
 }
