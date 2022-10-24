@@ -39,7 +39,7 @@ void GetArray(int[] arr)
     Random rnd = new Random();
     for (int i = 0; i < length; i++)
     {
-        arr[i] = rnd.Next(0, 2);
+        arr[i] = rnd.Next(0,2);
     }
 }
 void PrintArray(int[] arr)

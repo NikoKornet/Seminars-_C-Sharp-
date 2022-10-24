@@ -63,7 +63,6 @@ double[] ArithmeticMeanElemColumn(int[,] matrix)
             meanElemColumn = meanElemColumn + matrix[j, i];
             columnsMean[i] = Math.Round((Convert.ToDouble(meanElemColumn) / matrix.GetLength(0)), 2);
         }
-        
     }
     return columnsMean;
 }
