@@ -10,6 +10,7 @@ NaturalNumbers(number);
 void NaturalNumbers (int num)
 {
     if(num == 0) return;
-    Console.Write($"{num} ");
+    
     NaturalNumbers(num - 1);
+    Console.Write($"{num} ");
 }
